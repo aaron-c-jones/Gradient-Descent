@@ -2,15 +2,12 @@
 require(gridExtra)
 require(ggplot2)
 
-##Loss Function 1
+##Loss Function 1 and Derivative
 lossFunc <- function(x){ 2.9 * (x - 7)^2 + 1.5 }
 deriv <- function(x){ 2.9 * 2 * (x-7) }
 
-N = 1000
-x0 = 5
-
 ##Algorithm
-gradientDescent <- function(init, max_it = N, tol_err = 1e-06, learning_rate = 0.2, adaptive = TRUE){
+gradientDescent <- function(init, max_it = 1000, tol_err = 1e-06, learning_rate = 0.2, adaptive = TRUE){
   it = 0
   x = init
   learningRate = learning_rate
@@ -44,10 +41,12 @@ gradientDescent <- function(init, max_it = N, tol_err = 1e-06, learning_rate = 0
   return(df)
 }
 
+x0 = 5
 withAdapt = gradientDescent(x0)
 withoutAdapt = gradientDescent(x0, adaptive = FALSE)
 
 ##Plotting
+#Given Adaptive Learning Rate
 segmentWithAdapt <- data.frame(x = double(), y = double(), xend = double(), yend = double())
 for(i in 1:(nrow(withAdapt) - 1)){
   segmentWithAdapt[i, ] <- cbind(withAdapt[i, ], withAdapt[i + 1, ])
@@ -64,6 +63,7 @@ plot2withAdapt <- {ggplot(withAdapt, aes(rownames(withAdapt), y, group = 1)) +
     theme_bw()}
 grid.arrange(plot1withAdapt, plot2withAdapt, ncol = 2)
 
+#Given No Adaptive Learning Rate
 segmentWithoutAdapt <- data.frame(x = double(), y = double(), xend = double(), yend = double())
 for(i in 1:(nrow(withoutAdapt) - 1)){
   segmentWithoutAdapt[i, ] <- cbind(withoutAdapt[i, ], withoutAdapt[i + 1, ])
