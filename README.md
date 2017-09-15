@@ -36,6 +36,6 @@ where
 
 and
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\fn_cm&space;\Delta&space;x&space;=&space;x^{(i+1)}&space;-&space;x^{(i)}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\fn_cm&space;\Delta&space;x&space;=&space;x^{(i+1)}&space;-&space;x^{(i)}" title="\Delta x = x^{(i+1)} - x^{(i)}" /></a>
+<a href="http://www.codecogs.com/eqnedit.php?latex=\Delta&space;x&space;=&space;x^{(i&plus;1)}&space;-&space;x^{(i)}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Delta&space;x&space;=&space;x^{(i&plus;1)}&space;-&space;x^{(i)}" title="\Delta x = x^{(i+1)} - x^{(i)}" /></a>
 
 
