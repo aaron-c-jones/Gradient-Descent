@@ -32,8 +32,8 @@ In the function running Gradient Descent, there is an option that evaluates an a
 
 where
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\fn_cm&space;\Delta&space;g(x)&space;=&space;\triangledown&space;f(x^{(i)})&space;-&space;\triangledown&space;f(x^{(i-1)})" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\fn_cm&space;\Delta&space;g(x)&space;=&space;\triangledown&space;f(x^{(i)})&space;-&space;\triangledown&space;f(x^{(i-1)})" title="\Delta g(x) = \triangledown f(x^{(i)}) - \triangledown f(x^{(i-1)})" /></a>
+<a href="http://www.codecogs.com/eqnedit.php?latex=\fn_cm&space;\Delta&space;g(x)&space;=&space;\triangledown&space;f(x^{(i+1)})&space;-&space;\triangledown&space;f(x^{(i)})" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\fn_cm&space;\Delta&space;g(x)&space;=&space;\triangledown&space;f(x^{(i+1)})&space;-&space;\triangledown&space;f(x^{(i)})" title="\Delta g(x) = \triangledown f(x^{(i+1)}) - \triangledown f(x^{(i)})" /></a>
 
 and
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\fn_cm&space;\Delta&space;x&space;=&space;x^{(i)}&space;-&space;x^{(i-1)}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\fn_cm&space;\Delta&space;x&space;=&space;x^{(i)}&space;-&space;x^{(i-1)}" title="\Delta x = x^{(i)} - x^{(i-1)}" /></a>
+<a href="http://www.codecogs.com/eqnedit.php?latex=\fn_cm&space;\Delta&space;x&space;=&space;x^{(i+1)}&space;-&space;x^{(i)}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\fn_cm&space;\Delta&space;x&space;=&space;x^{(i+1)}&space;-&space;x^{(i)}" title="\Delta x = x^{(i+1)} - x^{(i)}" /></a>
