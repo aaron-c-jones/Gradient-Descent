@@ -7,10 +7,10 @@ attach(mtcars)
 fit <- lm(hp ~ wt, data = mtcars)
 plotOrig <- {ggplot(mtcars, aes(wt, hp)) +
   geom_point(size = 3) +
-  geom_abline(intercept = coef(fit)[1], slope = coef(fit)[2], size = 1.1, col = 'red') +
+  geom_abline(aes(intercept = coef(fit)[1], slope = coef(fit)[2], colour = 'blue'), size = 1.1) +
   labs(title = 'Linear Model', x = 'Disp', y = 'MPG') +
   theme_bw()}
-plotOrig
+plotOrig + scale_colour_manual(name = '', values = c('blue' = 'blue'), labels = c('Via Closed-Form Solution'))
 
 ##Loss Function 1 and Derivative
 lossFunc <- function(y, yhat, n){ (1 / n) * sum((y - yhat)^2) }
@@ -86,7 +86,8 @@ actualCoef
 ##Plotting
 coefFromGD <-c(withAdapt$b0[nrow(withAdapt)], withAdapt$b1[nrow(withAdapt)])
 plotNew <- {plotOrig +
-    geom_abline(intercept = coefFromGD[1], slope = coefFromGD[2], size = 1.1, col = 'blue', linetype = 2)}
+    geom_abline(aes(intercept = coefFromGD[1], slope = coefFromGD[2], colour = 'red'), size = 1.1, linetype = 2) +
+    scale_colour_manual(name = '', values = c('blue' = 'blue', 'red' = 'red'), labels = c('Via Closed-Form Solution', 'Via Gradient Descent'))}
 plotNew
 
 
