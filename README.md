@@ -39,3 +39,19 @@ and
 <a href="http://www.codecogs.com/eqnedit.php?latex=\Delta&space;x&space;=&space;x^{(i&plus;1)}&space;-&space;x^{(i)}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\Delta&space;x&space;=&space;x^{(i&plus;1)}&space;-&space;x^{(i)}" title="\Delta x = x^{(i+1)} - x^{(i)}" /></a>
 
 
+
+The 'Linear Model Gradient Descent' code file seeks to minimize the following mean squared error (MSE) function
+
+<a href="http://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\frac{1}{n}\sum_{i=1}^{n}(y&space;-&space;\hat{y})^2&space;=&space;\frac{1}{n}\sum_{i=1}^{n}(y&space;-&space;\hat{\beta_{0}}&space;-&space;\hat{\beta_{1}}*x&space;)^2" target="_blank"><img src="http://latex.codecogs.com/gif.latex?MSE&space;=&space;\frac{1}{n}\sum_{i=1}^{n}(y&space;-&space;\hat{y})^2&space;=&space;\frac{1}{n}\sum_{i=1}^{n}(y&space;-&space;\hat{\beta_{0}}&space;-&space;\hat{\beta_{1}}*x&space;)^2" title="MSE = \frac{1}{n}\sum_{i=1}^{n}(y - \hat{y})^2 = \frac{1}{n}\sum_{i=1}^{n}(y - \hat{\beta_{0}} - \hat{\beta_{1}}*x )^2" /></a>
+
+with the following derivatives
+
+<a href="http://www.codecogs.com/eqnedit.php?latex=\frac{dMSE}{d\beta_{0}}&space;=&space;\frac{1}{n}\sum_{i=1}^{n}2*(\hat{y}&space;-&space;y)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{dMSE}{d\beta_{0}}&space;=&space;\frac{1}{n}\sum_{i=1}^{n}2*(\hat{y}&space;-&space;y)" title="\frac{dMSE}{d\beta_{0}} = \frac{1}{n}\sum_{i=1}^{n}2*(\hat{y} - y)" /></a>
+
+and
+
+<a href="http://www.codecogs.com/eqnedit.php?latex=\frac{dMSE}{d\beta_{1}}&space;=&space;\frac{1}{n}\sum_{i=1}^{n}2*x*(\hat{y}&space;-&space;y)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\frac{dMSE}{d\beta_{1}}&space;=&space;\frac{1}{n}\sum_{i=1}^{n}2*x*(\hat{y}&space;-&space;y)" title="\frac{dMSE}{d\beta_{1}} = \frac{1}{n}\sum_{i=1}^{n}2*x*(\hat{y} - y)" /></a>
+
+
+
+There is a closed-form solution to this minimization (<a href="http://www.codecogs.com/eqnedit.php?latex=\hat{\beta}&space;=&space;(X^{T}X)^{-1}X^{T}Y" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\hat{\beta}&space;=&space;(X^{T}X)^{-1}X^{T}Y" title="\hat{\beta} = (X^{T}X)^{-1}X^{T}Y" /></a>), which renders the gradient descent not needed in general. However, using the linear model makes for clean and clear example that can be easily compared against a known solution.
