@@ -54,4 +54,4 @@ and
 
 
 
-There is a closed-form solution to this MSE minimization (<a href="http://www.codecogs.com/eqnedit.php?latex=\hat{\beta}&space;=&space;(X^{T}X)^{-1}X^{T}Y" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\hat{\beta}&space;=&space;(X^{T}X)^{-1}X^{T}Y" title="\hat{\beta} = (X^{T}X)^{-1}X^{T}Y" /></a>), which renders the gradient descent not needed in general. However, using the linear model makes for clean and clear example that can be easily compared against a known solution.
+There is a closed-form solution to this MSE minimization (<a href="http://www.codecogs.com/eqnedit.php?latex=\hat{\beta}&space;=&space;(X^{T}X)^{-1}X^{T}Y" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\hat{\beta}&space;=&space;(X^{T}X)^{-1}X^{T}Y" title="\hat{\beta} = (X^{T}X)^{-1}X^{T}Y" /></a>), which renders the gradient descent not needed. However, using the linear model makes for clean and clear example that can be easily compared against a known solution.
