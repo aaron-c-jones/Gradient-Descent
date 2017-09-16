@@ -89,3 +89,5 @@ plotNew <- {plotOrig +
     geom_abline(intercept = coefFromGD[1], slope = coefFromGD[2], size = 1.1, col = 'blue', linetype = 2)}
 plotNew
 
+
+
