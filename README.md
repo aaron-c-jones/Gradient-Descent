@@ -1,6 +1,7 @@
-# Gradient-Descent-and-XGBoost
 
-Exploratory work on the Gradient Descent algorithm and Extreme Gradient Boosting machine learning model.
+# Gradient-Descent
+
+Exploratory work on the Gradient Descent algorithm.
 
 The 'Basic Gradient Descent' file is based on the following cost function
 
